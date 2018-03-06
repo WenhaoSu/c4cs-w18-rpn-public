@@ -3,7 +3,7 @@
 import operator
 import readline
 
-from colorama import Fore, Back, Style, init
+from colorama import Fore, Back, Style
 
 operators = {
     '+': operator.add,

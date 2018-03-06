@@ -1,6 +1,6 @@
 import unittest
-
 import rpn
+from colorama import Fore, Back, Style
 
 class TestBasics(unittest.TestCase):
     def test_add(self):
@@ -20,4 +20,4 @@ class TestBasics(unittest.TestCase):
         self.assertEqual(27, result)
     def test_error_parameter(self):
         result = rpn.calculate("3 3 / 1")
-        self.assertEqual("Too many parameters", result)
+        self.assertEqual(Fore.RED + "Too many parameter" + Style.RESET_ALL, result)
