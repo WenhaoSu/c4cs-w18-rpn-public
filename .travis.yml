@@ -4,6 +4,7 @@ python:
 before_script:
   - pip install coverage
   - pip install python-coveralls
+  - pip install colorama
 script:
   - coverage run -m unittest test_rpn
 after_success:

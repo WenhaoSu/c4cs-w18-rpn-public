@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 import operator
+import readline
 
+from colorama import Fore, Back, Style, init
 
 operators = {
     '+': operator.add,
@@ -21,7 +23,7 @@ def calculate(myarg):
             stack.append(token)
         except ValueError:
             if not token in operators.keys():
-                return "Invalid operator"
+                return Fore.RED + "Invalid operator" + Style.RESET_ALL
             function = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
@@ -29,7 +31,7 @@ def calculate(myarg):
             stack.append(result)
         print(stack)
     if len(stack) != 1:
-        return "Too many parameters"
+        return Fore.RED + "Too many parameter" + Style.RESET_ALL
     return stack.pop()
 
 def main():
