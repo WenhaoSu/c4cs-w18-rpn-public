@@ -1,6 +1,6 @@
 import unittest
 import rpn
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 
 class TestBasics(unittest.TestCase):
     def test_add(self):
