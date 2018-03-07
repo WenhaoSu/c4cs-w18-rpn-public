@@ -21,3 +21,7 @@ class TestBasics(unittest.TestCase):
     def test_error_parameter(self):
         result = rpn.calculate("3 3 / 1")
         self.assertEqual(Fore.RED + "Too many parameter" + Style.RESET_ALL, result)
+    def test_error_operator(self):
+        result = rpn.calculate("3 3 @")
+        self.assertEqual(Fore.RED + "Invalid operator" + Style.RESET_ALL, result)
+
